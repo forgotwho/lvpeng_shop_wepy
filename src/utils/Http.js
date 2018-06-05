@@ -16,7 +16,7 @@ export default class http {
     console.info(`[http]request url=${url}`)
     const res = await wepy.request(param);
     if (this.isSuccess(res)) {			
-			java2pojotools2.saveHttpResponse(JSON.stringify(res.data));
+			java2pojotools2.saveHttpResponse(JSON.stringify(res.data.data));
       return res.data.data;
     } else {
       throw this.requestException(res);
