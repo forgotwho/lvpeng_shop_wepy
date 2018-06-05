@@ -8,9 +8,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/add',function(req,res,next){
+		const type = req.body['type'];
 		const fileName = req.body['fileName'];		
 		const beanText = req.body['beanText'];
-    fs.writeFile('java/'+fileName,beanText);
+    fs.writeFile('java/'+type+'/'+fileName,beanText);
 		res.send('Ok');
 });
 

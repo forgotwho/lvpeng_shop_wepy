@@ -666,6 +666,7 @@ function saveHttpResponse(jsonStr){
       url: 'http://localhost:8081/add',
 			method: 'post',
       data:{
+				'type': 'shop',
         'fileName': fileName,
 				'beanText': beanText
       },
