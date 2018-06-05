@@ -655,10 +655,16 @@ function getTypeFromJsonVal(val,key,attrClassAry) {
     }
 }
 
-function saveHttpResponse(jsonStr){
+function saveHttpResponse(url,method,jsonStr){
 	var package_name = 'com.lvpeng.shop.bean';
 	var dir = package_name.replace(/\./g, "/");
-	const beans = getBeanFieldFromJson(jsonStr,'TestRequest');
+	var className = url.substr(url.lastIndexOf('/')+1);
+	if(className.lastIndexOf('?')!=-1){
+		className = className.substr(0,className.lastIndexOf('?'));
+	}
+	var classNames = className.split('\_').map((name)=>{return firstToUpperCase(name)});
+	className = classNames.join('')+'Bean';
+	const beans = getBeanFieldFromJson(jsonStr,className);
 	for(let bean of beans){
 		const beanText = toBeanText(bean, package_name);
 		const fileName = bean.name+ '.java';
