@@ -8,4 +8,3 @@ dist/*
 /.wepyignore
 /package-lock.json
 /src/ext.json
-java/*
