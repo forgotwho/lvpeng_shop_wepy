@@ -1,7 +1,5 @@
 import wepy from 'wepy';
 
-const java2pojotools2 = require('../json2javapojo/java2pojotools2');
-
 // HTTP工具类
 export default class http {
   static async request (method, url, data, loading = true) {
@@ -15,8 +13,7 @@ export default class http {
     }
     console.info(`[http]request url=${url}`)
     const res = await wepy.request(param);
-    if (this.isSuccess(res)) {			
-			java2pojotools2.saveHttpResponse(url,method,JSON.stringify(res.data.data));
+    if (this.isSuccess(res)) {
       return res.data.data;
     } else {
       throw this.requestException(res);
