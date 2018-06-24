@@ -16,7 +16,8 @@
       'shopType': '1',
       'shopName': '连江日用品专营店',
       'appCode': 'owVHb1gHrvktni80kjMlFMzSDJDWY0xR',
-      'baseUrl': 'https://www.easy-mock.com/mock/5ab7c9627a7afd3099d16b4c/customer',
+      'baseUrl': 'http://localhost:8080',
+      // 'baseUrl': 'https://www.easy-mock.com/mock/5ab7c9627a7afd3099d16b4c/customer',
       version: 'v3.2.3',
       'componentsParams': {},
       'pageParams': {
