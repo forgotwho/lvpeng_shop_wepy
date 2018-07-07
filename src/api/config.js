@@ -87,7 +87,7 @@ export default class config extends base {
     const triggers = [];
     data.forEach(item => {
       if (item.param) {
-        const param = JSON.parse(item.param);
+        const param = item.param;//JSON.parse(item.param);
         Object.assign(item, param);
         item.param = null;
       }
@@ -108,13 +108,13 @@ export default class config extends base {
       .map(component => {
         // 先处理参数合并
         if (component.param) {
-          const param = JSON.parse(component.param);
+          const param = component.param;//JSON.parse(component.param);
           Object.assign(component, param);
           component.param = null;
         }
         // 处理内嵌数据
         if (component.data) {
-          component.data = JSON.parse(component.data);
+          component.data = component.data;//JSON.parse(component.data);
         }
         // 需要处理商品信息
         if (component.type == 'GOODS_BOX') {
