@@ -16,7 +16,7 @@
       'shopType': '1',
       'shopName': '我的品牌',
       'appCode': 'lvpeng',
-      //'appCode': 'owVHb1gHrvktni80kjMlFMzSDJDWY0xR',
+      // 'appCode': 'owVHb1gHrvktni80kjMlFMzSDJDWY0xR',
       'baseUrl': 'https://api.minebrand.cn/customer',
       // 'baseUrl': 'https://www.easy-mock.com/mock/5ab7c9627a7afd3099d16b4c/customer',
       version: 'v3.2.3',
